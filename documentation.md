@@ -9,26 +9,26 @@ ___
 * ###### **Konstruktor z parametrem** ``Stack stos(2)`` - tworzy stos i kładzie na stos podaną wartość int 
 
 ###### *Klasa posiada również konstruktor kopiujący*
-* ###### **Konstruktor z kopiujący** ``Stack stos(Stack innyStos)`` - tworzy kopię podane w argumencie stosu
+* ###### **Konstruktor kopiujący** ``Stack stos(Stack innyStos)`` - tworzy kopię podanego w argumencie stosu
 &nbsp;
-#### 2. Wypełnianie i Pobieranie elementów ze stosu
+#### 2. Wypełnianie i pobieranie elementów ze stosu
 
 ###### *Za pomocą metody*
-* ###### *Metoda*&nbsp;&nbsp; **Put(int)**&nbsp;&nbsp;&nbsp;&nbsp; ``stos.Put(2)`` - kładzie na stos podany w parametrze ``int``
-* ###### *Metoda*&nbsp;&nbsp; **Get()** &nbsp;&nbsp;&nbsp;&nbsp;``stos.Get()`` - zwraca porabny z góry stosu ``int``
+* ###### *Metoda*&nbsp;&nbsp; **Put(``int``)**&nbsp;&nbsp;&nbsp;&nbsp; ``stos.Put(2)`` - kładzie na stos podany w parametrze ``int``
+* ###### *Metoda*&nbsp;&nbsp; **Get()** &nbsp;&nbsp;&nbsp;&nbsp;``stos.Get()`` - zwraca pobrany z góry stosu ``int``
 ###### *Za pomocą przeciążonych operatorów*
-* ###### *Operator*&nbsp;&nbsp;**+** &nbsp;&nbsp;&nbsp;&nbsp; ``stos + 2`` - kładzie na stos podany w parametrze ``int``
-* ###### *Operator*&nbsp;&nbsp; **-** &nbsp;&nbsp;&nbsp;&nbsp; ``-stos`` - zwraca porabny z góry stosu ``int``
+* ###### *Operator*&nbsp;&nbsp;**+** &nbsp;&nbsp;&nbsp;&nbsp; ``stos + 2`` - kładzie na stos dodawany ``int``
+* ###### *Operator*&nbsp;&nbsp; **-** &nbsp;&nbsp;&nbsp;&nbsp; ``-stos`` - zwraca pobrany z góry stosu ``int``
 * ###### *Operator*&nbsp;&nbsp; **+=**&nbsp;&nbsp;&nbsp;&nbsp; ``stos += innyStos`` - kładzie na stos cała zawartość innego stosu klasy ``Stack``
 >w przypadku gdy nastąpi próba pobrania elementu z pustego stosu zostanie wyświetlony komunikat "Underflow.." i pobrany zostanie  - ``int`` równy `` 0``
 
 &nbsp;
 #### 3. Wyświetlanie stosu
 ###### *Wyświetlanie aktualnego stosu możliwe za pomocą przeciążonego operatora iostream*
-* ###### *Operator*&nbsp;&nbsp; **cout <<**&nbsp;&nbsp;&nbsp;&nbsp; ``cout << stos`` - wypisuje stos na konsole
+* ###### *Operator*&nbsp;&nbsp; **cout <<**&nbsp;&nbsp;&nbsp;&nbsp; ``cout << stos`` - wypisuje stos w konsoli
 
 &nbsp;
-#### 3. Pozostałe metody
+#### 4. Pozostałe metody
 ###### *Stan stosu*
 * ###### *Statyczna metoda*&nbsp;&nbsp; **State()**&nbsp;&nbsp;&nbsp;&nbsp; ``stos.State()`` - zwraca informacje o stanie stosu w postaci enum (``empty`` = ``false``, ``contains`` = ``true``)
 ###### *Rozmiar stosu*
@@ -36,7 +36,7 @@ ___
 &nbsp;
 
 ## Przykłady
-Tworzymy stos o nazwie stos1 wypełniony ``int``-em o wartości ``13``:
+Tworzymy stos o nazwie ``stos1`` wypełniony ``int``-em o wartości ``13``:
 ```c++
     Stack stos1(13);
 ```
@@ -46,9 +46,9 @@ Za pomocą **metody** oraz **operatora** kładziemy na stosie ``6`` a następnie
     stos1 + 14;
     cout << stos1;
 ```
-*w wyniku otrzymamy w konsoli...*
+*w konsoli otrzymamy:*
 ```
-KONSOLA:
+KONSOLA
 \/--Stack--
 |  14
 |  6
@@ -69,7 +69,7 @@ KONSOLA
 |  13
 \/--------
 ```
-Spróbujmy teraz pobrać ze stosu więcej elementów niż się w nim znajdue:
+Spróbujmy teraz pobrać ze stosu więcej elementów niż się w nim znajduje:
 ```c++
     cout << -stos1 << endl;
     cout << -stos1 << endl;
@@ -130,4 +130,4 @@ KONSOLA
 &nbsp;
 &nbsp;
 &nbsp;
-2022r projekt z programowania komputerów, Czaja Paweł, Zuzanna Chrabańska, Igor Ignacek.
+2022 r. projekt z programowania komputerów, Zuzanna Chrabańska, Paweł Czaja, Igor Ignacek.
